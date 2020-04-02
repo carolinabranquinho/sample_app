@@ -7,6 +7,5 @@ if Rails.env.production?
         :aws_secret_access_key => ENV['CXCGAsQDqFKp5cjM1wUOMJUio+2pNmj+IuOkplto']
       }
       config.fog_directory     =  ENV['sampleappbucket2020']
-      config.fog_provider = 'fog/aws'
     end
   end
