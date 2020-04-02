@@ -8,5 +8,6 @@ if Rails.env.production?
         :region                => ENV['sa-east-1']
       }
       config.fog_directory     =  ENV['sampleappbucket2020']
+      config.fog_provider = 'fog/aws'
     end
   end
