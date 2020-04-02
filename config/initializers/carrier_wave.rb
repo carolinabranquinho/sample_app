@@ -1,5 +1,6 @@
 if Rails.env.production?
     CarrierWave.configure do |config|
+      config.fog_provider = 'fog/aws'
       config.fog_credentials = {
         # Configuration for Amazon S3
         :provider              => 'AWS',
@@ -8,6 +9,5 @@ if Rails.env.production?
         :region                => ENV['sa-east-1']
       }
       config.fog_directory     =  ENV['sampleappbucket2020']
-      config.fog_provider = 'fog/aws'
     end
   end
